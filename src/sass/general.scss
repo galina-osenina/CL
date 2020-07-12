@@ -87,6 +87,7 @@ p {
 .section_bg {
   color: $text-color-secondary;
 
+  .h2,
   .button {
     color: inherit;
   }
@@ -94,6 +95,21 @@ p {
 
 .section_bg_1 {
   background-color: #113c3e;
+}
+
+.section_bg_2 {
+  background-image: linear-gradient(90deg, #de3d3d, #f28b6a);
+}
+
+.cta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 300px;
+
+  @media (min-width: $tablet) {
+    min-height: 550px;
+  }
 }
 
 .icon {
@@ -124,6 +140,29 @@ main {
   padding-top: 60px;
 }
 
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.logos__item {
+  margin: 20px;
+}
+
+.slogan {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #fff;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    margin-right: 100px;
+  }
+}
 
 
 
