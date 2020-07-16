@@ -127,6 +127,44 @@ p {
   }
 }
 
+.section-intro-light {
+  background-color: #fff;
+  min-height: 400px;
+  display: flex;
+
+  @media (min-width: $tablet) {
+    min-height: 665px;
+  }
+}
+
+.section-intro-light {
+  padding-top: 70px;
+
+  @media (min-width: $tablet) {
+    padding-top: 55px;
+  }
+}
+
+.intro-light {
+  min-height: 400px;
+  display: flex;
+
+  @media (min-width: $tablet) {
+    min-height: 556px;
+    background-image: url('../images/ring-light.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 40% auto;
+  }
+}
+
+.inrto-light {
+  background-image: url('../images/ring.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: calc(min(60%,795px)) auto;
+}
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -138,6 +176,13 @@ p {
 .intro__h1 {
   color: $text-color-secondary;
   max-width: 600px;
+}
+
+.intro__text {
+  @media (min-width: $tablet) {
+    max-width: 50%;
+    margin-bottom: 50px;
+  }
 }
 
 .cta {
@@ -165,6 +210,11 @@ p {
 
 .icon_bg_white {
   background-image: url('../images/symbol_white.svg');
+}
+
+.icon_size_md {
+  width: 60px;
+  height: 69px;
 }
 
 .icon-heading {

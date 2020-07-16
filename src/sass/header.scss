@@ -11,6 +11,21 @@
 .header_bg {
   background-color: $color-primary;
   transition: background-color 0.5s linear;
+
+  &.header_light {
+    background-color: #fff;
+  }
+}
+
+.header_light {
+  background-color: transparent;
+
+  @media (min-width: $tablet) {
+    .nav-list__link,
+    .nav__button {
+      color: $text-color-primary;
+    }
+  }
 }
 
 .header__container {
@@ -69,6 +84,13 @@
   }
 }
 
+.menu-button_dark {
+  &:before,
+  &:after {
+    background: $color-tertiary;
+  }
+}
+
 .menu-button_open {
   width: 20px;
 
@@ -92,7 +114,7 @@
   padding: 10px 60px 10px 20px;
   transition: left 0.5s;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet - 1) {
     background-color: $color-primary;
 
     .nav-list__link {
@@ -103,6 +125,10 @@
 
 .header__nav_visible {
   left: 0;
+
+  .nav__button {
+    background-color: rgba(254, 254, 254, 0.15);
+  }
 }
 
 .body_fixed {

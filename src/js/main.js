@@ -79,9 +79,12 @@ $(function() {
   //       }
   //   });
 
-  $('[data-carousel-item]').on('click', function() {
-    $('[data-carousel-panel]').fadeOut();
-    $("[data-carousel-panel]='" + $(this).data('carousel-item') + "'").fadeIn();
+  $('[data-carousel-item]').on('click', function(e) {
+    e.preventDefault();
+    $('.carousel__item_active').removeClass('carousel__item_active');
+    $("[data-carousel-panel]").fadeOut();
+    $(this).parent('.carousel__item').addClass('carousel__item_active');
+    $("[data-carousel-panel='" + $(this).data('carousel-item') + "']").fadeIn();
   });
 
 });

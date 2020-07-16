@@ -6,8 +6,10 @@
   "scripts": {
     "start": "cross-env PORT=1234 gulp start --development ",
     "build": "gulp build --production",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://galina-osenina.github.io/CL",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/galina-osenina/CL.git"
