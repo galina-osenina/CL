@@ -1,6 +1,11 @@
 .footer {
+  display: none;
   background-color: $color-primary;
   padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
 }
 
 .footer__content {
@@ -13,16 +18,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-}
-
-.footer__col {
-  margin-right: 30px;
-  list-style-type: none;
-  padding-left: 0;
-
-  &:last-child {
-    margin-right: 0;
-  }
+  font-size: 14px;
 }
 
 .footer__nav-list .nav-list__item:hover {
@@ -33,10 +29,5 @@
 
 .footer__copyright {
   font-size: 14px;
-  color: rgba(179, 179, 179, 0.2);
-  margin-top: 40px;
-
-  @media (min-width: $tablet) {
-    margin-top: 0;
-  }
+  color: rgba(254, 254, 254, 0.5);
 }

@@ -79,4 +79,9 @@ $(function() {
   //       }
   //   });
 
+  $('[data-carousel-item]').on('click', function() {
+    $('[data-carousel-panel]').fadeOut();
+    $("[data-carousel-panel]='" + $(this).data('carousel-item') + "'").fadeIn();
+  });
+
 });

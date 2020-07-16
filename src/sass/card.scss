@@ -12,6 +12,10 @@
   margin-top: 50px!important;
 }
 
+.card-list_justify {
+  justify-content: space-between;
+}
+
 .card {
   width: 100%;
   background-color: $card-bg;
@@ -35,6 +39,17 @@
 
 }
 
+.card_simple {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    width: 45%;
+  }
+}
+
 .panel {
   display: inline-block;
   background-color: $card-bg;
@@ -51,6 +66,11 @@
 
 .card__icon {
   margin-bottom: 20px;
+}
+
+.card__number {
+  color: $color-tertiary;
+  margin-right: 5px;
 }
 
 .card__title {

@@ -101,6 +101,18 @@ p {
   background-image: linear-gradient(90deg, #de3d3d, #f28b6a);
 }
 
+.section_bg_3 {
+  background-color: #34a5a5;
+}
+
+.section_bg_4 {
+  background-color: #267368;
+}
+
+.section_bg_primary {
+  background-color: $color-primary;
+}
+
 .section-intro {
   background-color: $color-primary;
   background-image: url('../images/ring.png');
@@ -133,7 +145,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 300px;
+  min-height: 200px;
 
   @media (min-width: $tablet) {
     min-height: 550px;
@@ -181,6 +193,7 @@ p {
   line-height: 1.2;
   font-weight: 500;
   color: #fff;
+  margin-right: 20px;
 
   @media (min-width: $tablet) {
     font-size: 60px;

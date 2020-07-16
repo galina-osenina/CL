@@ -1,0 +1,27 @@
+.carousel__item {
+  .carousel__panel {
+    display: none;
+    flex: 1;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.carousel__item_active {
+  .carousel__panel {
+    display: block;
+  }
+}
+
+.item__name {
+  @media (min-width: $tablet) {
+    width: 380px;
+  }
+}
+
+.carousel__panel {
+  margin-top: 0;
+}
