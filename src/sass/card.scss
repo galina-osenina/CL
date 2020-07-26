@@ -16,6 +16,8 @@
   justify-content: space-between;
 }
 
+$card-breakpoint: (400*3 + 40)px;
+
 .card {
   width: 100%;
   background-color: $card-bg;
@@ -28,15 +30,81 @@
   flex-direction: column;
   align-items: flex-start;
 
-  @media (min-width: $tablet) {
-    width: 390px;
+  @media (min-width: $tablet) and (max-width: 1240px) {
+    width: calc(32% - 20px);
     margin: 10px;
   }
 
-  @media (min-width: $tablet) and (max-width: $desctop) {
-    width: 30%;
+  @media (min-width: 1240px) {
+    width: 400px;
+    margin: 10px;
   }
 
+}
+
+.flip-wrap {
+  width: 100%;
+  perspective: 1170px;
+  margin: 10px;
+  z-index: 1;
+
+  @media (min-width: 640px) and (max-width: 980px) {
+    width: calc(50% - 20px);
+  }
+
+  @media (min-width: 980px) and (max-width: 1280px) {
+    width: calc(31% - 20px);
+  }
+
+  @media (min-width: 1280px) {
+    width: 400px;
+  }
+
+  &.is-flipped {
+    z-index: 2;
+
+    .card_flip {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.card_flip {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 1.3s cubic-bezier(0.34, 1.03, 0.32, 1.28);
+  transform-style: preserve-3d;
+  margin: 0;
+}
+
+.card__side {
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.card__side_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px;
+  transform: rotateY(0deg);
+  color: #fff;
+  background-color: #34a5a5;
+  border-radius: 5px;
+
+  .card__text {
+    font-weight: 400;
+  }
+}
+
+.card__side_back {
+  transform: rotateY(180deg);
 }
 
 .card_simple {
@@ -105,7 +173,7 @@
 }
 
 .card__text_mb {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .card__button {

@@ -1,0 +1,142 @@
+.form {
+  color: $text-color-primary;
+  background-color: $card-bg;
+  padding: 22px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+
+.form__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form__note {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.form__group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form__placeholder {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all .15s ease-in-out;
+  cursor: text;
+}
+
+.form__placeholder--active {
+  top: -5px;
+  bottom: auto;
+  font-size: 11px;
+  color: $color-tertiary;
+}
+
+.form__input,
+.form__textarea {
+  position: relative;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #b3b3b3;
+  border-right: 0;
+  padding: 10px 0;
+  line-height: 1;
+
+  &:focus {
+    border-bottom: 1px solid $color-primary;
+    outline: 0;
+  }
+}
+
+.form__textarea {
+  resize: none;
+  height: 50px;
+  padding-right: 60px;
+}
+
+.form__upload {
+  position: absolute;
+  right: 24px;
+  bottom: 8px;
+  font-size: 20px;
+  color: #b3b3b3;
+  transform: rotate(135deg);
+  cursor: pointer;
+}
+
+.form__footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.form__button {
+  margin-right: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.form__link {
+  color: $color-secondary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.label-pointer {
+  cursor: pointer;
+}
+
+.form-contact {
+  @media (min-width: $tablet) {
+    max-width: 80%;
+  }
+}
+
+.form__placeholder--required:after {
+  content: '*';
+  color: $color-secondary;
+}
+
+.error-form {
+  position: absolute;
+  left: 0;
+  bottom: -23px;
+  padding: 3px 5px;
+  background-image: $gradient-primary;
+  color: #fff;
+  line-height: 1;
+  font-size: 12px;
+  z-index: 100;
+
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $color-tertiary;
+    position: absolute;
+    top: -5px;
+  }
+}
+
+.form__output {
+  font-size: 14px;
+  color: $color-secondary;
+}

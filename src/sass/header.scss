@@ -19,6 +19,9 @@
 
 .header_light {
   background-color: transparent;
+  .nav__button {
+    color: $text-color-secondary;
+  }
 
   @media (min-width: $tablet) {
     .nav-list__link,
@@ -107,12 +110,12 @@
 
 .header__nav {
   position: fixed;
-  top: 0;
-  left: -100%;
+  top: -100%;
+  left: 0;
   width: 100%;
-  bottom: 0;
+  height: 100%;
   padding: 10px 60px 10px 20px;
-  transition: left 0.5s;
+  transition: top 0.5s;
 
   @media (max-width: $tablet - 1) {
     background-color: $color-primary;
@@ -124,7 +127,7 @@
 }
 
 .header__nav_visible {
-  left: 0;
+  top: 0;
 
   .nav__button {
     background-color: rgba(254, 254, 254, 0.15);
