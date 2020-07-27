@@ -7,8 +7,10 @@ $h2-color: $text-color-primary;
 $text-color-secondary: #fff;
 
 $gradient-primary: linear-gradient(-90deg, #de3d3d, #f28b6a);
+$gradient-primary-reversed: linear-gradient(-90deg, #f28b6a, #de3d3d);
 
 $card-bg: #fcfdff;
+$card-breakpoint: 1438px;
 
 $tablet: 850px;
 $desctop: 1260px;

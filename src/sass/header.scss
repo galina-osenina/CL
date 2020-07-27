@@ -21,6 +21,13 @@
   background-color: transparent;
   .nav__button {
     color: $text-color-secondary;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), transparent);
+    }
   }
 
   @media (min-width: $tablet) {

@@ -11,14 +11,13 @@ a:focus {
   color: $text-color-primary;
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0.05);
-  border: 1px solid transparent;
   border-radius: 5px;
   padding: 10px 30px;
 
   &:hover,
   &:focus {
-    border-color: #fff;
     outline: 0;
+    background-image: linear-gradient(90deg, rgba(254, 254, 254, 0.15), transparent);
   }
 }
 
@@ -38,6 +37,12 @@ a:focus {
   background-image: $gradient-primary;
   color: #fff;
   border: none;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    background-image: $gradient-primary-reversed;
+  }
 }
 
 .button_align_bottom {
