@@ -210,6 +210,11 @@ p {
   height: 50px;
   background-image: url('../images/symbol.svg');
   background-repeat: no-repeat;
+
+  img {
+    max-width: 35px;
+    max-height: 35px;
+  }
 }
 
 .icon_bg_white {
