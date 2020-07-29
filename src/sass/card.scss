@@ -69,11 +69,11 @@ $card-breakpoint: (400*3 + 40)px;
   }
 }
 
-.card_flip {
+.card.card_flip {
   width: 100%;
   height: 100%;
   position: relative;
-  transition: 1.3s cubic-bezier(0.34, 1.03, 0.32, 1.28);
+  transition: transform 1.3s cubic-bezier(0.34, 1.03, 0.32, 1.28);
   transform-style: preserve-3d;
   margin: 0;
 }
