@@ -113,6 +113,7 @@ $card-breakpoint: (400*3 + 40)px;
   background-color: transparent;
   border: none;
   width: 100%;
+  padding: 0;
 
   @media (min-width: $tablet) {
     width: 45%;

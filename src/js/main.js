@@ -23,6 +23,25 @@ $(function() {
     }
   }
 
+  function submitForm () {
+      $.ajax({
+          url: '',
+          type: 'POST',
+          dataType: 'json',
+          success: function () {
+              $('.form__input').val('');
+              $('.form__input').blur();
+              $('.form__footer').append('<div class="form__output">Your message has been sent.</div>');
+              setTimeout(function() {
+                  $('.form__output').remove();
+              }, 3000);
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+              $('.form__footer').append('<div class="form__output form__output_error">Something went wrong. Please try again later</div>');
+          }
+      })
+  }
+
   changeHeader();
 
   $(window).on('scroll', function() {
@@ -38,25 +57,19 @@ $(function() {
       $(this).parent().find('.form__placeholder').removeClass('form__placeholder--active');
     }
   });
-  //
-  // $('.js-contact-btn').on('click', function (e) {
-  //     var _target = $('.js-form-contact');
-  //
-  //     if( _target.length ) {
-  //         e.preventDefault();
-  //
-  //         if ($('.header__nav_visible').length) {
-  //             $('.menu-button').toggleClass('menu-button_open');
-  //             $('.header__nav').toggleClass('header__nav_visible');
-  //             $('body').toggleClass('body_fixed');
-  //         }
-  //
-  //         $('html, body').animate({
-  //             scrollTop: _target.offset().top
-  //         }, 500);
-  //     }
-  // });
-  //
+
+  $('.js-contact-btn').on('click', function (e) {
+      var _target = $('.js-form-contact');
+
+      if( _target.length ) {
+          e.preventDefault();
+
+          $('html, body').animate({
+              scrollTop: _target.offset().top
+          }, 500);
+      }
+  });
+
     $(".js-form-contact").validate({
         rules: {
             name: "required",
@@ -77,6 +90,7 @@ $(function() {
             setTimeout(function() {
                 $('.form__output').remove();
             }, 3000);
+            //submitForm();
         }
     });
 

@@ -138,5 +138,9 @@
 
 .form__output {
   font-size: 14px;
-  color: $color-secondary;
+  color: $text-color-primary;
+}
+
+.form__output_error {
+  color: $color-tertiary;
 }

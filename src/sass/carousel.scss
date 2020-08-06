@@ -94,9 +94,10 @@ $carousel-control-width: 380px;
   flex-wrap: wrap;
   list-style-type: none;
   margin-bottom: -15px;
+  justify-content: flex-start;
 
-  @media (min-width: $tablet) {
-    justify-content: flex-start;
+  @media (min-width: $tablet) and (max-width: $desctop){
+    justify-content: space-around;
   }
 }
 
