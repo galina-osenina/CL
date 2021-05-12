@@ -64,6 +64,7 @@ $card-breakpoint: (400*3 + 40)px;
     z-index: 2;
 
     .card_flip {
+      background-color: transparent;
       transform: rotateY(180deg);
     }
   }
@@ -94,7 +95,7 @@ $card-breakpoint: (400*3 + 40)px;
   bottom: 0;
   font-size: 15px;
   padding: 14px;
-  transform: rotateY(0deg);
+  transform: rotateY(180deg);
   color: #fff;
   background-color: #34a5a5;
   border-radius: 5px;
@@ -102,10 +103,6 @@ $card-breakpoint: (400*3 + 40)px;
   .card__text {
     font-weight: 400;
   }
-}
-
-.card__side_back {
-  transform: rotateY(180deg);
 }
 
 .card.card_simple {
